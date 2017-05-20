@@ -1,0 +1,149 @@
+> Plugin - *Awesome Widget* _Prototype_
+```# CONTAINER
+# Featured Image / Icon
+# TITLE
+# TITLE DIVIDER
+# TITLE with Image / Icon
+# DESCRIPTION
+# BUTTON ONE (REPEATER)
+
+# CONTAINER
+	- Background Type
+		- Background Color
+		- Background Overlay
+			- (Repeat, Position, Stretch, Darken, Fixed)
+		- Background Image
+		- Background Gradient
+			- Degree
+	- Border
+		- Width
+		- Style
+		- Color
+	- Padding (left/right/top/bottom)
+	- Margin (left/right/top/bottom)
+
+# Featured Image / Icon
+	- Featured Type
+		- Icon
+			- Icon size in px
+			- Shape
+				- Circle
+				- Square
+			- Background Type
+				- Background Color
+				- Background Gradient
+			- Border
+				- Width
+				- Style
+				- Color
+			- Background Type
+				- Background Color
+				- Background Gradient
+			- Border
+				- Width
+				- Style
+				- Color
+		- Image
+			- Image width in px
+	- Location Top / Left / Right / Bottom
+
+# TITLE
+	- Heading tag (H2/H6,span,div) 
+	- Font size (px,em,rem)
+	- Line height (px,em,rem)
+	- Color
+	- Padding (left/right/top/bottom)
+	- Margin (left/right/top/bottom)
+	- Background Type
+		- Background Color
+		- Background Gradient
+	- Border
+		- Width
+		- Style
+		- Color
+
+# TITLE DIVIDER
+	- Type
+		- Divider Border
+			- Border with (px,em,%)
+			- Border color
+			- Border thickness (px,em,%)
+		- Divider Icon
+			- Font size (px,em,rem)
+			- Shape
+				- Circle
+				- Square
+			- Background Type
+				- Background Color
+				- Background Gradient
+			- Border
+				- Width
+				- Style
+				- Color
+			- Border
+				- Border width
+				- Border style
+				- Border Color
+		- Divider Image
+			- Image width (px)
+
+		- Divider Text
+			– Font size (px,em,rem)
+			– Line height (px,em,rem)
+			- Color
+
+	- Alignment
+		- Left
+		- Right
+		- Center
+
+# TITLE with Image / Icon
+	- Featured Type
+		- Icon
+			- Icon size in px
+		- Image
+			- Image width in px
+	- Location Left / Right
+	- Shape
+		- Circle
+		- Square
+	- Background Type
+		- Background Color
+		- Background Gradient
+	- Border
+		- Width
+		- Style
+		- Color
+	- Background Type
+		- Background Color
+		- Background Gradient
+	- Border
+		- Width
+		- Style
+		- Color
+
+# DESCRIPTION
+	- Tinymce Editor
+	- Description tag (p,span,div)
+	- Font size (px,em,rem)
+	- Line height (px,em,rem)
+	- Color
+	- Padding (left/right/top/bottom)
+	- Margin (left/right/top/bottom)
+	- Background Type
+		- Background Color
+		- Background Gradient
+
+# BUTTON ONE (REPEATER)
+	- Add Link
+	- Open in new tab
+	- Color
+	- Font size (px,em,rem)
+	- Line height (px,em,rem)
+	- Background Color
+	- Style
+		- Outline
+		- Filled
+		- 3d
+
+```
