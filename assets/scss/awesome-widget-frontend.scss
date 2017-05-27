@@ -1,0 +1,72 @@
+.awesome-widget {
+	display: flex;
+	align-items: center;
+
+	// Rest.
+	img {
+		box-shadow: none;
+	}
+	.heading {
+		display: flex;
+		margin-bottom: 1em;
+	}
+	.description {
+		font-size: 0.8rem;
+		line-height: normal;
+	}
+
+	// Add padding if box has
+	// Background image/background color etc.
+	&.has-box-bg {
+		padding: 1em;
+	}
+
+	/**
+	 * Featured image/icon position? (left/right/top/bottom).
+	 */
+	&.left {
+		.content {
+			padding-left: 1em;
+		}
+	}
+	&.right {
+	    flex-direction: row-reverse;
+		.content {
+		    padding-right: 1em;
+		}
+	}
+	&.top {
+	    flex-direction: column;
+	}
+	&.bottom {
+	    flex-direction: column-reverse;
+	}
+
+	/**
+	 * Header
+	 */
+	.heading {
+
+		// Header image/icon position? (left/right/top/bottom).
+		&.left i {
+			margin-left: 1em;
+		}
+		&.right {
+		    flex-direction: row-reverse;
+			i {
+				margin-right: 1em;
+			}
+		}
+
+		// Text alignments (left/center/right).
+		&.text-left {
+		    justify-content: flex-start;
+		}
+		&.text-center {
+		    justify-content: center;
+		}
+		&.text-right {
+		    justify-content: flex-end;
+		}
+	}
+}

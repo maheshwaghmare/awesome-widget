@@ -1,0 +1,57 @@
+{
+    "preset-1": {
+        "title": "",
+        "container_bg": "#f3f9f9",
+        "featured_media": "image",
+        "featured_media_align": "left",
+        "heading": "Heading",
+        "title_align": "text-center",
+        "title_sep": "none",
+        "title_media": "icon",
+        "title_media_align": "right",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "button": ""
+    },
+    "preset-2": {
+        "title": "",
+        "container_bg": "#35bbe8",
+        "container_bg_2": "#46e2be",
+        "featured_media": "image",
+        "featured_media_align": "left",
+        "heading": "Heading",
+        "title_align": "text-center",
+        "title_sep": "none",
+        "title_media": "icon",
+        "title_media_align": "right",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "button": ""
+    },
+    "preset-3": {
+        "title": "",
+        "container_bg": "#35bee8",
+        "container_bg_2": "#6846e2",
+        "featured_media": "icon",
+        "featured_media_align": "right",
+        "heading": "Block Heading",
+        "title_align": "text-left",
+        "title_sep": "none",
+        "title_media": "none",
+        "title_media_align": "left",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "button": ""
+    },
+    "preset-4": {
+        "title": "",
+        "container_bg": "#0fb8ad",
+        "container_bg_2": "",
+        "featured_media": "image",
+        "featured_media_align": "right",
+        "heading": "Heading",
+        "title_align": "text-right",
+        "title_sep": "none",
+        "title_media": "none",
+        "title_media_align": "left",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "button": ""
+    },
+}
