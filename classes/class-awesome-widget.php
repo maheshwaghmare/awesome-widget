@@ -71,6 +71,7 @@ if( ! class_exists( 'Awesome_Widget' ) ) :
 			$title_media_align    = ! empty( $instance['title_media_align'] ) ? $instance['title_media_align'] : ''; 			// Title with image / icon
 			$description          = ! empty( $instance['description'] ) ? $instance['description'] : ''; 			// Description
 			$button               = ! empty( $instance['button'] ) ? $instance['button'] : ''; 					// Button one (repeater)
+			$button_link               = ! empty( $instance['button_link'] ) ? $instance['button_link'] : ''; 					// Button one (repeater)
 
 			// Added filters.
 			$title = apply_filters( 'widget_title', $title ); // Title
@@ -119,7 +120,7 @@ if( ! class_exists( 'Awesome_Widget' ) ) :
 
 				<div class="featured">
 					<?php if( 'image' == $featured_media ) { ?>
-						<img src="<?php echo esc_url( AWESOME_WIDGET_URL . 'assets\images\img (13).png'); ?>" />
+						<img src="<?php echo esc_url( AWESOME_WIDGET_URL . 'assets/images/img (13).png'); ?>" />
 					<?php } else if( 'icon' == $featured_media ) { ?>
 						<i class="fa fa-facebook"></i>
 					<?php } ?>
@@ -130,7 +131,7 @@ if( ! class_exists( 'Awesome_Widget' ) ) :
 					<div class="heading <?php echo esc_attr( $title_media_align ); ?> <?php echo esc_attr( $title_align ); ?>">
 						<div class="featured">
 							<?php if( 'image' == $title_media ) { ?>
-								<img src="<?php echo esc_url( AWESOME_WIDGET_URL . 'assets\images\img (13).png'); ?>" />
+								<img src="<?php echo esc_url( AWESOME_WIDGET_URL . 'assets/images/img (13).png'); ?>" />
 							<?php } else if( 'icon' == $title_media ) { ?>
 								<i class="fa fa-facebook"></i>
 							<?php } ?>
@@ -149,7 +150,7 @@ if( ! class_exists( 'Awesome_Widget' ) ) :
 					<?php } ?>
 
 					<?php if( $button ) { ?>
-						<a class="button" href="#"> <?php echo esc_html( $button ); ?></a>
+						<a class="button" href="<?php echo esc_url( $button_link ); ?>"> <?php echo esc_html( $button ); ?></a>
 					<?php } ?>
 
 				</div><!-- .content -->
@@ -192,21 +193,22 @@ if( ! class_exists( 'Awesome_Widget' ) ) :
 			 * E.g. Title, Description, Image etc.
 			 */
 			$title                = ( isset( $instance['title'] ) ) ? $instance['title'] : ''; 						// Title
-			$heading              = ( isset( $instance['heading'] ) ) ? $instance['heading'] : 'Block Heading'; 					// Heading
-			$featured_media       = ( isset( $instance['featured_media'] ) ) ? $instance['featured_media'] : ''; 	// Featured image / icon
-			$featured_media_align = ( isset( $instance['featured_media_align'] ) ) ? $instance['featured_media_align'] : ''; 	// Featured image / icon
+			$heading              = ( isset( $instance['heading'] ) ) ? $instance['heading'] : __( 'Block Heading', 'awesome-widget' ); 					// Heading
+			$featured_media       = ( isset( $instance['featured_media'] ) ) ? $instance['featured_media'] : 'image'; 	// Featured image / icon
+			$featured_media_align = ( isset( $instance['featured_media_align'] ) ) ? $instance['featured_media_align'] : 'top'; 	// Featured image / icon
 			$title_sep            = ( isset( $instance['title_sep'] ) ) ? $instance['title_sep'] : ''; 				// Title divider
-			$title_align          = ( isset( $instance['title_align'] ) ) ? $instance['title_align'] : ''; 			// Title with image / icon
+			$title_align          = ( isset( $instance['title_align'] ) ) ? $instance['title_align'] : 'text-center'; 			// Title with image / icon
 			$title_media          = ( isset( $instance['title_media'] ) ) ? $instance['title_media'] : ''; 			// Title with image / icon
 			$title_media_align    = ( isset( $instance['title_media_align'] ) ) ? $instance['title_media_align'] : ''; 			// Title with image / icon
 			$description          = ( isset( $instance['description'] ) ) ? $instance['description'] : __( 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', 'awesome-widget' ); 			// Description
-			$button               = ( isset( $instance['button'] ) ) ? $instance['button'] : 'Button'; 					// Button one (repeater)
+			$button               = ( isset( $instance['button'] ) ) ? $instance['button'] : __( 'Read More&hellip;', 'awesome-widget' ); 					// Button one (repeater)
+			$button_link               = ( isset( $instance['button_link'] ) ) ? $instance['button_link'] : '#'; 					// Button one link
 
 			/**
 			 * Styling options
 			 */
-			$container_bg         = ! empty( $instance['container_bg'] ) ? $instance['container_bg'] : ''; 	// Container background color.
-			$container_bg_2       = ! empty( $instance['container_bg_2'] ) ? $instance['container_bg_2'] : ''; 	// Container background color.
+			$container_bg         = ! empty( $instance['container_bg'] ) ? $instance['container_bg'] : '#34d7e2'; 	// Container background color.
+			$container_bg_2       = ! empty( $instance['container_bg_2'] ) ? $instance['container_bg_2'] : '#438dd8'; 	// Container background color.
 
 			?>
 
@@ -373,11 +375,16 @@ if( ! class_exists( 'Awesome_Widget' ) ) :
 				 */
 				?>
 				<div class="aw-accordion-section">
-			        <h3> <i class="dashicons dashicons-external"></i> <?php esc_html_e( 'Button', 'awesome-widget' ); ?> </h3>
+			        <h3> <i class="dashicons dashicons-external"></i> <?php esc_html_e( 'Button Link', 'awesome-widget' ); ?> </h3>
 			        <div class="aw-accordion-content">
 			        	<p>
 						  	<label for="<?php echo $this->get_field_id( 'button' ); ?>"> <?php esc_html_e( 'Button:', 'awesome-widget' ); ?> <br/>
 						  		<input class="widefat" type="text" id="<?php echo $this->get_field_id( 'button' ); ?>" name="<?php echo $this->get_field_name( 'button' ); ?>" value="<?php echo esc_attr( $button ); ?>" />
+						  	</label>
+						</p>
+			        	<p>
+						  	<label for="<?php echo $this->get_field_id( 'button_link' ); ?>"> <?php esc_html_e( 'Button link:', 'awesome-widget' ); ?> <br/>
+						  		<input class="widefat" type="text" id="<?php echo $this->get_field_id( 'button_link' ); ?>" name="<?php echo $this->get_field_name( 'button_link' ); ?>" value="<?php echo esc_attr( $button_link ); ?>" />
 						  	</label>
 						</p>
 			        </div>

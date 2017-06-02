@@ -10,9 +10,13 @@
 		display: flex;
 		margin-bottom: 1em;
 	}
+	.button,
 	.description {
 		font-size: 0.8rem;
 		line-height: normal;
+	}
+	.description {
+		margin-bottom: 1em;
 	}
 
 	// Add padding if box has
@@ -25,11 +29,19 @@
 	 * Featured image/icon position? (left/right/top/bottom).
 	 */
 	&.left {
+		.content,
+		> .featured {
+			flex: 1;
+		}
 		.content {
 			padding-left: 1em;
 		}
 	}
 	&.right {
+		.content,
+		> .featured {
+			flex: 1;
+		}
 	    flex-direction: row-reverse;
 		.content {
 		    padding-right: 1em;
@@ -49,12 +61,12 @@
 
 		// Header image/icon position? (left/right/top/bottom).
 		&.left i {
-			margin-left: 1em;
+			margin-right: 1em;
 		}
 		&.right {
 		    flex-direction: row-reverse;
 			i {
-				margin-right: 1em;
+				margin-left: 1em;
 			}
 		}
 
